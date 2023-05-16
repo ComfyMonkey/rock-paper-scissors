@@ -16,18 +16,17 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return "DRAW!";
+        return `DRAW! Player chose ${playerSelection} and Computer chose ${computerSelection}.`;
     } else if (
         (playerSelection === "Rock" && computerSelection === "Scissors") ||
         (playerSelection === "Paper" && computerSelection === "Rock") || 
         (playerSelection === "Scissors" && computerSelection === "Paper")
     ) {
-        return "Player Wins!";
+        return `Player Wins! ${playerSelection} beats ${computerSelection}.`;
     } else {
-        return "Computer Wins!"
+        return `Computer Wins! ${playerSelection} loses against ${computerSelection}.`;
     }
 }
-
 
   const playerSelection = "Rock";
   const computerSelection = getComputerChoice();
